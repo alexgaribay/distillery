@@ -266,7 +266,7 @@ _configure_node() {
     case $NAME in
         *@*)
             if [ "$NAME_TYPE" = "-name" ]; then
-                if [[ ! "$NAME" =~ ^[^@]+@[^\.]+\..*$ ]]; then
+                if [[ ! "$NAME" =~ ^[^@]+@[^\.].*$ ]]; then
                     # -name was given, but the hostname is not fully qualified
                     fail "Failed setting -name! The hostname in '$NAME' is not fully qualified"
                 fi
